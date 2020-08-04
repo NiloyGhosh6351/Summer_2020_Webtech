@@ -13,11 +13,14 @@
 			$data = fread($file, filesize('registration.txt'));
 			$user = explode('|', $data);
 
-
-			/*while(!feof($data)){
-				$user = fgets($data);
+			$s=0;
+			echo count($user1);
+			while($s>(count($user1)+1){
+				$data= $user1[$s];
 				$user = explode('|', $data);
-			}*/
+				echo $s;
+				$s=$s-1;
+			}
 
 			//print_r($user);
 
