@@ -22,7 +22,7 @@
 			//print_r($user);
 
 			if(trim($user[0]) == $id && trim($user[1]) == $password){
-				$_SESSION['status']  = "Ok";
+				//$_SESSION['status']  = "Ok";
 				header('location: home.php');
 			}else{
 				echo "Invalid username/password";
