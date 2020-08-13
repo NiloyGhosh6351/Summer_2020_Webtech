@@ -14,7 +14,7 @@
 			$conn =mysqli_connect('127.0.0.1', 'root', '', 'healthcaremanagementsystem');
 			$sql = "select * from registration where username='{$username}' and password='{$password}'";
 			$result = mysqli_query($conn, $sql);
-			$user 	= mysqli_fetch_assoc($result);
+			$user=mysqli_fetch_assoc($result);
 			
 			if(!empty($user)){
 				//$_SESSION['status']  = "Ok";

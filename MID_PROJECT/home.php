@@ -11,6 +11,14 @@
 		</center>
 		<hr>
 		<center>
+			<a href="profile.php"><u>Profile</u></a>
+		</center>
+		<hr>
+		<center>
+			<a href="picture.html"><u>Profile Picture</u></a>
+		</center>
+		<hr>
+		<center>
 			<a href="donorlist.html"><u>Donor List</u></a>
 		</center>
 		<hr>
