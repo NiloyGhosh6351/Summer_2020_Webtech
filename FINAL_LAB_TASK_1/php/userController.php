@@ -92,14 +92,15 @@
 	//add user
 	if(isset($_POST['createcompany']))
 	{
+		$id=getnextvalue();
 		$companyname 	= $_POST['companyname'];
 		$profiledescription 	= $_POST['profiledescription'];
 		$industry 		= $_POST['industry'];
 		$companywebsite 		= $_POST['companywebsite'];
-		$filedir 		= $_POST['companylogo'];
+		$filedir 		= '../picture'.$id.".jpg";
 		$useraccountid 		= $_POST['useraccountid'];
 
-		if(empty($companyname) || empty($profiledescription) || empty($industry) || empty($companywebsite) || empty($filedir) || empty($useraccountid))
+		if(empty($companyname) || empty($profiledescription) || empty($industry) || empty($companywebsite) || empty($_FILES['companylogo']) || empty($useraccountid))
 		{
 			header('location: ../views/create_company_details.php?error=null_value');
 		}
@@ -117,9 +118,16 @@
 
 			$status = insert1($usercompany);
 
-			if($status){
+			if($status)
+			{
+				if (move_uploaded_file($_FILES['companylogo']['tmp_name'], $filedir))
+				{
+					echo "succcessful!";
+				}
 				header('location: ../views/company_details.php?success=done');
-			}else{
+			}
+			else
+			{
 				header('location: ../views/create_company_details.php?error=db_error');
 			}
 		}

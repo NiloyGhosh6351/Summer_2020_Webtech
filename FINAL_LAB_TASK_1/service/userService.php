@@ -135,7 +135,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "insert into company_table values('', '{$usercompany['companyname']}','{$usercompany['profiledescription']}', '{$usercompany['industry']}', ,'{$usercompany['companywebsite']}','{$usercompany['companylogo']}','{$usercompany['useraccountid']}')";
+		$sql = "insert into company_table values('', '{$usercompany['companyname']}','{$usercompany['profiledescription']}', '{$usercompany['industry']}' ,'{$usercompany['companywebsite']}','{$usercompany['companylogo']}','{$usercompany['useraccountid']}')";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
@@ -173,4 +173,22 @@
 			return false;
 		}
 	}
+
+	function getnextvalue(){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "SELECT `AUTO_INCREMENT` as 'Id' FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'webtech' AND TABLE_NAME = 'company_table'";
+		$result = mysqli_query($conn, $sql);
+		//var_dump($result);
+		//$row = mysqli_fetch_assoc($result);
+		$user = mysqli_fetch_assoc($result);
+		//echo $row['id'];
+		return $user['Id'];
+		//return $row['id'];
+	}
+
 ?>

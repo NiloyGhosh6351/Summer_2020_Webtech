@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<form action="../php/userController.php" method="post">
+	<form action="../php/userController.php" method="post" enctype="multipart/form-data">
 		<fieldset>
 			<legend>Create New Company Information</legend>
 			<table>
@@ -36,12 +36,10 @@
 					<td>Company Website</td>
 					<td><input type="text" name="companywebsite"></td>
 				</tr>
-				<form action="fileupload.php" method="post">
-					<tr>
+				<tr>
 					<td>Company Logo</td>
 					<td><input type="file" name="companylogo"></td>
 				</tr>
-				</form>
 				<tr>
 					<td>User Account ID</td>
 					<td><input type="text" name="useraccountid"></td>
