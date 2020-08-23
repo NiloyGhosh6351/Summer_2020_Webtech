@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood Group</title>
+	<script type="text/javascript" src="bloodgroup.js"></script>
+</head>
+<body>
+	<form name="bd" action="bloodgroup.php" method="post" onsubmit="return validate()">
+		<fieldset>
+			<h3>Blood Group</h3> 
+				<select name="bd">
+					<option>Select Blood Group</option>
+					<option>A+</option>
+					<option>B+</option>
+					<option>O+</option>
+					<option>AB+</option>
+				</select>
+			<br>
+			<br>
+			<input type="submit" name="submit">
+			<table>
+				<tr>
+					<td id="bdmsg"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
