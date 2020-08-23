@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Of Birth</title>
+	<script type="text/javascript" src="dateofbirth.js"></script>
+</head>
+<body>
+	<form action="dateofbirth.php" method="post" onsubmit="return validate()">
+		<fieldset>
+			<legend>Date of Birth</legend>
+			<pre class="tab">dd   mm     yyyy</pre><br>
+			<input type="text" id="day" name="day" size="1%" onkeyup="remover()">/
+			<input type="text" id="month" name="month" size="1%" onkeyup="remover()">/
+			<input type="text" id="year"	name="year" size="2%" onkeyup="remover()"><br>
+			<br>
+			<input type="submit" name="submit" value="submit">
+			<table>
+				<tr>
+					<td id="dateofbirthmsg"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
