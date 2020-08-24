@@ -3,7 +3,7 @@ function validate()
 {
 	if (document.getElementById('number').value!="" && document.getElementById('file').value!="") 
 	{
-		if (parseInt(number,10)>0) 
+		if (parseInt(number,35)>0) 
 		{
 			return true;
 		}
@@ -23,6 +23,6 @@ function remover()
 {
 	if(document.getElementById('number').value!="")
 	{
-		ocument.getElementById('filemsg').innerHTML="";
+		document.getElementById('filemsg').innerHTML="";
 	}
 }
