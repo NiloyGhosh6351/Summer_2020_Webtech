@@ -1,7 +1,7 @@
 
 function validate()
 {
-	if (document.getElementById('number')!="" && document.getElementById('file')!="") 
+	if (document.getElementById('number').value!="" && document.getElementById('file').value!="") 
 	{
 		if (parseInt(number,10)>0) 
 		{
