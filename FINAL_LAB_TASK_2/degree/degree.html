@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Degree</title>
+	<script type="text/javascript" src="degree.js"></script>
+</head>
+<body>
+	<form name="degree" action="degree.php" method="post" onsubmit="return validate()">
+		<fieldset>
+			<legend>Degree</legend>
+			<input type="checkbox" id="degree1" name="degree1" value="SSC"> SSC
+			<input type="checkbox" id="degree2" name="degree2" value="HSC"> HSC
+			<input type="checkbox" id="degree3" name="degree3" value="BSc"> BSc<br>
+			<br>
+			<input type="submit" name="submit">
+			<table>
+				<tr>
+					<td id="degreemsg"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
