@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Picture</title>
+	<script type="text/javascript" src="profilepicture.js"></script>
+</head>
+<body>
+	<form name="file" action="profilepicture.php" method="post" onsubmit="return validate()"> 
+		<fieldset>
+			<legend>Profile Picture</legend>
+			User Id<input type="number" id="number" name="number"><br>
+			<br>
+			Picture<input type="file" id="file" name="file"><br>
+			<br>
+			<input type="submit" name="submit">
+			<table>
+				<tr>
+					<td id="filemsg"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
