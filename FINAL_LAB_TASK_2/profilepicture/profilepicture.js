@@ -21,7 +21,7 @@ function validate()
 }
 function remover()
 {
-	if(document.getElementById('number').value)
+	if(document.getElementById('number').value!="")
 	{
 		ocument.getElementById('filemsg').innerHTML="";
 	}
