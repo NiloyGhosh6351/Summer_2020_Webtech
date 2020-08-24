@@ -1,12 +1,8 @@
 <?php
 
-	if (isset($_POST['name'])) {
-		# code...
-		echo $_POST['name'];
-	}
-	else
+	if (isset($_POST['submit'])) 
 	{
-		echo "invalid";
+		# code...
+		echo $_POST['username'];
 	}
-
 ?>

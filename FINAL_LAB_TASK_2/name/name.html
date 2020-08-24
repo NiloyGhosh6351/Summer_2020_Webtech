@@ -2,13 +2,22 @@
 <html>
 <head>
 	<title>Name</title>
+	<script type="text/javascript" src="name.js"></script>
 </head>
 <body>
-	<form action="name.php" method="post" onclick="">
-	<h3>Name</h3>
-	<input type="text" name="name"><br>
-	<br>
-	<input type="submit" name="submit">
+	<form action="name.php" method="post" onsubmit="return validate()">
+	<table>
+		<tr>
+			<td>Name</td> 
+			<td><input type="text" id="username" name="username" onkeyup="remover()"></td>
+			<td id="usernamemsg"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="submit" value="submit"></td>
+			<td></td>
+		</tr>
+	</table>
 	</form>
 </body>
 </html>
