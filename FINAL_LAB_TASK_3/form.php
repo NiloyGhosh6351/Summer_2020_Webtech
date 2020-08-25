@@ -32,6 +32,10 @@
 		}
 		echo "uploded";
 	}
+	else
+	{
+		header("location: form.html");
+	}
 
 	//email
 	/*if (isset($_POST['submit'])) 
