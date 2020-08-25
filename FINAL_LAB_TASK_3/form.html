@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>Full Form</title>
+	<script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+	<form name="form" action="form.php" method="post" onsubmit="return validate()">
+
+		<table align="center" width="30%" height="60%" border="2">
+				<tr>
+					<td colspan="3"> 
+						<h3 align="center">PERSON PROFILE</h3>
+					</td>
+				</tr>
+				<tr height="9%">
+					<td> Name</td>
+					<td>
+						<input type="text" id="name" name="name" onkeyup="removername()">
+					</td>
+					<td id="namemsg"></td>
+					<td width="6%"></td>
+				</tr>
+				<tr height="9%">
+					<td> Email</td>
+					<td>
+						<input type="email" id="email" name="email" onkeyup="removeremail()">
+					</td>
+					<td id="emailmsg"></td>
+					<td width="6%"></td>
+				</tr>
+				<tr height="9%">
+					<td> Gender</td>
+					<td>
+						<input type="radio" name="gender" value="Male">  Male 
+						<input type="radio" name="gender" value="Female"> Female
+						<input type="radio" name="gender" value="Other"> Other
+					</td>
+					<td id="gendermsg"></td>
+					<td width="6%"></td>
+				</tr>
+				<tr height="9%">
+					<td> Date of Birth</td>
+					<td>
+						<input type="text" size="1%" id="day" name="day" onkeyup="removerdob()">/<input type="text" size="1%" id="month" name="month" onkeyup="removerdob()">/<input type="text" size="2%" id="year" name="year" onkeyup="removerdob()"> (dd/mm/yyyy)
+					</td>
+					<td id="dateofbirthmsg"></td>
+					<td width="6%"></td>
+				</tr>
+				<tr height="9%">
+					<td> Blood Group</td>
+					<td>
+						<select name="bd">
+							<option>A+</option>
+							<option>B+</option>
+							<option>O+</option>
+							<option>AB+</option>
+						</select>
+					</td>
+					<td id="bdmsg"></td>
+					<td width="6%"></td>
+				</tr>
+				<tr height="9%">
+					<td> Degree</td>
+					<td>
+						<input type="checkbox" id="degree1" name="degree1" value="SSC"> SSC 
+						<input type="checkbox" id="degree2" name="degree2" value="HSC"> HSC 
+						<input type="checkbox" id="degree3" name="degree3" value="BSc."> BSc. 
+						<input type="checkbox" id="degree4" name="degree4" value="MSc"> MSc. 
+					</td>
+					<td id="degreemsg"></td>
+					<td width="6%"></td>
+				</tr>
+				<tr height="9%">
+					<td> Photo</td>
+					<td colspan="2">
+						<input type="file" id="file" name="file" onkeyup="removerpicture()"> 
+					</td>
+					<td id="filemsg"></td>
+				</tr>
+				<tr height="9%">
+					<td colspan="3"></td>
+				</tr>
+				<tr height="9%">
+					<td colspan="3" align="right">
+						<input type="submit" value="submit" name="submit">
+						<input type="Reset" value="Reset">
+					</td>
+			</table>
+		</form>
+
+</body>
+</html>
