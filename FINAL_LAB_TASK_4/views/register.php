@@ -27,7 +27,7 @@
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><input type="text" name="email" id="email" onkeyup="removeremail()"></td>
+					<td><input type="text" name="email" id="email" onkeyup="f2()"></td>
 					<td id="emailmsg"></td>
 				</tr>
 				<tr>
@@ -46,16 +46,16 @@
 	<script type="text/javascript">
 		function f1() {
 			
-			var name=document.getElementById('email').value;
+			var name=document.getElementById('username').value;
 			var email=document.getElementById('email').value;
-			var password=document.getElementById('email').value;
+			var password=document.getElementById('password').value;
 
 			if(name!="" && email!="" && password!="" && document.getElementById('emailmsg').innerHTML=="")
 			{
 				var xhttp = new XMLHttpRequest();
 			xhttp.open('POST', '../php/regCheck.php', true);
 			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-			xhttp.send('name='+name+'&passowrd='+password+'&email='+email+);
+			xhttp.send('username='+name+'&passowrd='+password+'&email='+email+);
 
 			xhttp.onreadystatechange = function (){
 			if(this.readyState == 4 && this.status == 200){
@@ -68,11 +68,6 @@
 				
 			}	
 			}
-				
-
-
-
-
 				document.getElementsByTagName('a')[0].style.display='inline';
 			}
 		}
