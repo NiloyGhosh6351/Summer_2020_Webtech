@@ -1,40 +1,9 @@
 <?php
 	//name
-	if (isset($_POST['submit']) && isset($_POST['gender']) && isset($_POST['bd'])) 
+	if (isset($_POST['submit'])) 
 	{
 		# code...
-		echo $_POST['name'];
-		echo $_POST['email'];
-		echo $_POST['gender'];
-		echo $_POST['day'];
-		echo $_POST['month'];
-		echo $_POST['year'];
-		echo $_POST['bd'];
-		if (isset($_POST['degree1'])) 
-		{
-			# code... 
-			echo $_POST['degree1'];
-		}
-		if (isset($_POST['degree2'])) 
-		{
-			# code... 
-			echo $_POST['degree2'];
-		}
-		if (isset($_POST['degree3'])) 
-		{
-			# code... 
-			echo $_POST['degree3'];
-		}
-		if (isset($_POST['degree4'])) 
-		{
-			# code... 
-			echo $_POST['degree4'];
-		}
-		echo "uploded";
-	}
-	else
-	{
-		header("location: form.html");
+		echo "Successfully submit";
 	}
 
 	//email
