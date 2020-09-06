@@ -35,8 +35,8 @@
 			<td><?=$users[$i]['password']?></td>
 			<td><?=$users[$i]['type']?></td>
 			<td>
-				<a href="edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
-				<a href="delete.php?id=<?=$users[$i]['id']?>">Delete</a> 
+				<a href="edit.php?type=<?=$users[$i]['type']?>">Edit</a> |
+				<a href="delete.php?type=<?=$users[$i]['type']?>">Delete</a> 
 			</td>
 		</tr>
 

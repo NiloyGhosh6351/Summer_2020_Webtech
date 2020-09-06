@@ -1,14 +1,14 @@
 <?php
 	require_once('../db/db.php');
 
-	function getByID($id){
+	function getByID($type){
 		$conn = dbConnection();
 
 		if(!$conn){
 			echo "DB connection error";
 		}
 
-		$sql = "select * from users where id={$id}";
+		$sql = "select * from users where type={$type}";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		return $row;
@@ -45,7 +45,7 @@
 		$user = mysqli_fetch_assoc($result);
 
 		if(count($user) > 0 ){
-			return true;
+			return $user['type'];
 		}else{
 			return false;
 		}
@@ -59,7 +59,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "insert into users values('{$user['authorname']}', '{$user['contactnumber']}','{$user['username']}', '{$user['password']}', '{$user['type']}')";
+		$sql = "insert into users values('{$user['authorname']}', '{$user['contactnumber']}','{$user['username']}', '{$user['password']}', 'author')";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
@@ -74,7 +74,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "update users set username='{$user['username']}', password='{$user['password']}', email='{$user['email']}' where id={$user['id']}";
+		$sql = "update users set authorname='{$user['authorname']}', contactnumber='{$user['contactnumber']}', username='{$user['username']}', password='{$user['password']}' where type='{$user['author']}";
 
 		if(mysqli_query($conn, $sql)){
 			return true;

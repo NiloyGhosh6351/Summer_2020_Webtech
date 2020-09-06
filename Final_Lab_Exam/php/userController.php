@@ -37,20 +37,22 @@
 	//update user
 	if(isset($_POST['edit'])){
 
+		$authorname = $_POST['authorname'];
+		$contactnumber = $_POST['contactnumber'];
 		$username 	= $_POST['username'];
 		$password 	= $_POST['password'];
-		$email 		= $_POST['email'];
-		$id 		= $_POST['id'];
+		$type 	= $_POST['type'];
 
-		if(empty($username) || empty($password) || empty($email)){
-			header('location: ../views/edit.php?id={$id}');
+		if(empty($username) || empty($password){
+			header('location: ../views/edit.php?type={$type}');
 		}else{
 
 			$user = [
+				'authorname'=>$authorname,
+				'contactnumber'=>$contactnumber,
 				'username'=> $username,
 				'password'=> $password,
-				'email'=> $email,
-				'id'=> $id
+				'type'=> $type
 			];
 
 			$status = update($user);
@@ -58,7 +60,7 @@
 			if($status){
 				header('location: ../views/all_users.php?success=done');
 			}else{
-				header('location: ../views/edit.php?id={$id}');
+				header('location: ../views/edit.php?type={$type}');
 			}
 		}
 	}
