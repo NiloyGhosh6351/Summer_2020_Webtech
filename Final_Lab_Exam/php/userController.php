@@ -10,8 +10,9 @@
 		$contactnumber = $_POST['contactnumber'];
 		$username 	= $_POST['username'];
 		$password 	= $_POST['password'];
+		$type 	= $_POST['type'];
 
-		if(empty($authorname) || empty($contactnumber) || empty($username) || empty($password)){
+		if(empty($authorname) || empty($contactnumber) || empty($username) || empty($password) || empty($type)){
 			header('location: ../views/register.php?error=null_value');
 		}else{
 
@@ -19,7 +20,8 @@
 				'authorname'=>$authorname,
 				'contactnumber'=>$contactnumber,
 				'username'=> $username,
-				'password'=> $password
+				'password'=> $password,
+				'type'=> $type
 			];
 
 			$status = insert($user);

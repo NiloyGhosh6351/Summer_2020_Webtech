@@ -22,6 +22,7 @@
 			<td>Contactnumber</td>
 			<td>Username</td>
 			<td>Password</td>
+			<td>Type</td>
 		</tr>
 
 		<?php  
@@ -32,6 +33,7 @@
 			<td><?=$users[$i]['contactnumber']?></td>
 			<td><?=$users[$i]['username']?></td>
 			<td><?=$users[$i]['password']?></td>
+			<td><?=$users[$i]['type']?></td>
 			<td>
 				<a href="edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
 				<a href="delete.php?id=<?=$users[$i]['id']?>">Delete</a> 

@@ -7,14 +7,16 @@
 
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+		$type = $_POST['type'];
 
-		if(empty($username) || empty($password)){
+		if(empty($username) || empty($password) || empty($type)){
 			header('location: ../views/login.php?error=null_value');
 		}else{
 
 			$user = [
 				'username'=>$username,
 				'password'=>$password,
+				'type'=>$type
 			];
 			
 			$status = validate($user);
