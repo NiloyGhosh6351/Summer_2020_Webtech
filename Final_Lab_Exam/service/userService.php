@@ -10,8 +10,8 @@
 
 		$sql = "select * from users where type={$type}";
 		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
-		return $row;
+		//$row = mysqli_fetch_assoc($result);
+		return $result;
 	}
 
 	function getAllUser(){
@@ -21,7 +21,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from users";
+		$sql = "select * from users ";
 		$result = mysqli_query($conn, $sql);
 		$users = [];
 
@@ -75,6 +75,20 @@
 		}
 
 		$sql = "update users set authorname='{$user['authorname']}', contactnumber='{$user['contactnumber']}', username='{$user['username']}', password='{$user['password']}' where type='{$user['author']}";
+
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function delete($user){
+		$conn = dbConnection();
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "delete from users where type='{$user['author']}";
 
 		if(mysqli_query($conn, $sql)){
 			return true;

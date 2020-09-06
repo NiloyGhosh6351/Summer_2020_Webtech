@@ -43,7 +43,7 @@
 		$password 	= $_POST['password'];
 		$type 	= $_POST['type'];
 
-		if(empty($username) || empty($password){
+		if(empty($authorname) || empty($contactnumber) || empty($username) || empty($password)){
 			header('location: ../views/edit.php?type={$type}');
 		}else{
 
@@ -61,6 +61,36 @@
 				header('location: ../views/all_users.php?success=done');
 			}else{
 				header('location: ../views/edit.php?type={$type}');
+			}
+		}
+	}
+	//delete
+	if(isset($_POST['delete'])){
+
+		$authorname = $_POST['authorname'];
+		$contactnumber = $_POST['contactnumber'];
+		$username 	= $_POST['username'];
+		$password 	= $_POST['password'];
+		$type 	= $_POST['type'];
+
+		if(empty($authorname) || empty($contactnumber) || empty($username) || empty($password)){
+			header('location: ../views/delete.php?type={$type}');
+		}else{
+
+			$user = [
+				'authorname'=>$authorname,
+				'contactnumber'=>$contactnumber,
+				'username'=> $username,
+				'password'=> $password,
+				'type'=> $type
+			];
+
+			$status = delete($user);
+
+			if($status){
+				header('location: ../views/all_users.php?success=done');
+			}else{
+				header('location: ../views/delete.php?type={$type}');
 			}
 		}
 	}
